@@ -1,0 +1,34 @@
+
+<h2>Your Inbox  (EmberFire Real Time POC)</h2>
+<table class="payments-table grid" role="grid" tabindex="0">
+<caption>Your Inbox </caption>
+<thead role="rowgroup">
+    <tr role="row">
+        <th tabindex="-1" role="columnheader" scope="col" aria-label="" class="inbox-checkbox">
+            <button tabindex="-1" class="icon checkbox unselected" id="inbox-checkbox" role="checkbox" data-ember-action="1069">
+                <img class="icon checkbox-checked" src="http://tsproductdelivery.jpmchase.net:8080/ac360/css/images/checkbox_checked.svg" alt="checkbox checked">
+                <img class="icon checkbox-unchecked" src="http://tsproductdelivery.jpmchase.net:8080/ac360/css/images/checkbox_unchecked.svg" alt="checkbox checked">
+            </button>
+        </th>
+        <th tabindex="-1" role="columnheader" scope="col" aria-label="" class="inbox-document">Document</th>
+        <th tabindex="-1" role="columnheader" scope="col" aria-label="" class="inbox-format">Format</th>
+        <th tabindex="-1" role="columnheader" scope="col" aria-label="" class="inbox-run-date">Run Date</th>
+    </tr>
+</thead>
+<tbody>
+  {{#each  document in model}}
+
+        <tr role="row" id="" class="even">
+            <td tabindex="-1" role="gridcell" aria-label="" class="inbox-checkbox">
+                <button tabindex="-1" class="icon checkbox unselected" id="inbox-checkbox" role="checkbox">
+                    <img class="icon checkbox-checked" src="http://tsproductdelivery.jpmchase.net:8080/ac360/css/images/checkbox_checked.svg" alt="checkbox checked">
+                    <img class="icon checkbox-unchecked" src="http://tsproductdelivery.jpmchase.net:8080/ac360/css/images/checkbox_unchecked.svg" alt="checkbox checked">
+                </button>
+            </td>
+            <td tabindex="-1" class="inbox-document">{{document.doc}} </td>
+            <td tabindex="-1" role="gridcell" aria-label="Format" class="inbox-format">{{document.format}} </td>
+            <td tabindex="-1" role="gridcell" aria-label="Run Date" class="inbox-run-date">{{document.rundate}} </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
